@@ -1,0 +1,5 @@
+train: C:\Users\Danik\Downloads\Telegram Desktop\Dataset\images\train
+val: C:\Users\Danik\Downloads\Telegram Desktop\Dataset\images\test
+
+nc: 3
+names: ['5_16', '7_3', '7_5']
