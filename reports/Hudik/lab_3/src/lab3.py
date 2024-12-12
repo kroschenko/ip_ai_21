@@ -10,8 +10,8 @@ from models.common import DetectMultiBackend
 # Настройка модели
 YOLO_PATH = Path("")  # Путь к YOLOv5
 device = select_device('mps')  # Используем GPU, если доступно
-weights = "/Users/andrewhudik/Downloads/ip_ai_21/reports/Hudik/lab_3/src/yolov5/yolov5s.pt"  # Путь к обученной модели
-data = str("/Users/andrewhudik/Downloads/ip_ai_21/reports/Парфеевец/3/src/data.yaml")
+weights = "/Users/andrewhudik/Downloads/ip_ai_21/reports/Hudik/lab_3/src/yolov5/yolov5m.pt"  # Путь к обученной модели
+data = str("/Users/andrewhudik/Downloads/ip_ai_21/reports/Hudik/3/src/data.yaml")
 
 # Загрузка модели
 model = DetectMultiBackend(weights, device=device, data=data)
@@ -62,5 +62,5 @@ def predict_video(source, output):
         vid_writer.release()
 
 # Запуск обработки видео
-predict_video('/Users/andrewhudik/Downloads/ip_ai_21/reports/Hudik/lab_3/src/content/Brest Day Lab Work 3.mp4', "output_day.mp4")
-# predict_video("Брест ночь.mp4", "output_night.mp4")
+predict_video('/Users/andrewhudik/Downloads/Brest Day Lab Work 3.mp4', "output_day.mp4")
+predict_video("/Users/andrewhudik/Downloads/Brest Night Lab Work 3.mp4", "output_night.mp4")
